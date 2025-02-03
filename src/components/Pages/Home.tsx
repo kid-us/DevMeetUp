@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import Loading from "../Loading/Loading";
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         transition={{ delay: 6, duration: 2 }}
         className="container mx-auto"
       >
+        <Navbar />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odio
           est magnam optio quidem vel modi magni tenetur perferendis tempore
