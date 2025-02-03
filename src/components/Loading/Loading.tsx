@@ -28,7 +28,7 @@ const Loading = () => {
   return (
     <AnimatePresence>
       {show && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black">
+        <div className="bg-primary fixed top-0 left-0 right-0 bottom-0">
           <motion.div
             initial={{ opacity: 1 }}
             animate={{ opacity: [0.8, 0.5, 0.3, 0] }}
@@ -36,7 +36,7 @@ const Loading = () => {
               delay: 3,
               duration: 3,
             }}
-            className="flex justify-center items-center gap-x-10  h-screen"
+            className="flex lg:justify-center items-center lg:gap-x-10 md:gap-x-8 gap-x-8 h-screen mx-3"
           >
             <motion.p
               layout
@@ -46,7 +46,7 @@ const Loading = () => {
                 delay: 0.3,
                 duration: 1,
               }}
-              className="flex justify-center items-center font-mono text-xl text-blue-300"
+              className="flex justify-center items-center lg:text-2xl text-lg text-blue-400 font-bold"
             >
               {"<"}DevMeetUp <span className="bi-cup-hot-fill ms-2"></span>{" "}
               {"/>"}
@@ -62,7 +62,9 @@ const Loading = () => {
                   delay: v.delay,
                   duration: 0.5,
                 }}
-                className="font-mono relative text-xl"
+                className={`font-bold relative lg:text-xl ${
+                  v.version === "v3" ? "text-white" : "text-green-400"
+                }`}
               >
                 <motion.span
                   initial={{ opacity: 0, x: -5 }}
@@ -78,8 +80,10 @@ const Loading = () => {
                     repeatDelay: 0.5,
                   }}
                   className={`absolute -top-2 -right-4 ${v.icon} ${
-                    v.icon === "bi-hourglass-top" && "text-sm"
-                  } text-green-500`}
+                    v.version === "v3"
+                      ? "text-sm text-yellow-400"
+                      : "text-white"
+                  } `}
                 />
                 {v.version}
               </motion.p>
