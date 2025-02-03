@@ -1,0 +1,27 @@
+.hero {
+  display: grid;
+  min-height: 88vh;
+  place-items: center;
+  position: relative;
+}
+
+.hero::before {
+  position: absolute;
+  --size: 2.75rem;
+  --line: color-mix(in oklch, canvasText, transparent 90%);
+  content: "";
+  width: 97vw;
+  height: 100vh;
+  background: linear-gradient(
+        90deg,
+        var(--line) 0.0625rem,
+        transparent 0.0625rem var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 0.0625rem, transparent 0.0625rem var(--size))
+      50% 50% / var(--size) var(--size);
+  mask: linear-gradient(-20deg, transparent 20%, #f0f0f0);
+  transform-style: flat;
+  pointer-events: none;
+  z-index: -1;
+}
