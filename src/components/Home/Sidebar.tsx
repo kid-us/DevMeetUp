@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -54,26 +55,75 @@ const Sidebar = () => {
             </button>
             {openedDirectory.includes(file.id) && (
               <div className="ms-5 space-y-2 my-4">
-                <button className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start">
+                <motion.button
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                  transition={{
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8],
+                  }}
+                  className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start"
+                >
                   <span className="text-gray-400 bi-arrow-up-right me-1"></span>{" "}
                   Organizer.meet
-                </button>
-                <button className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start">
+                </motion.button>
+                <motion.button
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8],
+                  }}
+                  className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start"
+                >
                   <span className="text-gray-400 bi-arrow-up-right me-1"></span>{" "}
                   Sponsors.meet
-                </button>
-                <button className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start">
+                </motion.button>
+                <motion.button
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                  transition={{
+                    delay: 0.4,
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8],
+                  }}
+                  className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start"
+                >
                   <span className="text-gray-400 bi-arrow-up-right me-1"></span>{" "}
                   Venue.meet
-                </button>
-                <button className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start">
+                </motion.button>
+                <motion.button
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                  transition={{
+                    delay: 0.6,
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8],
+                  }}
+                  className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start"
+                >
                   <span className="text-gray-400 bi-arrow-up-right me-1"></span>{" "}
                   Highlight.meet
-                </button>
-                <button className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start">
+                </motion.button>
+                <motion.button
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.1, 1.2, 1.1, 1] }}
+                  transition={{
+                    delay: 0.8,
+                    duration: 1,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.4, 0.6, 0.8],
+                  }}
+                  className="text-teal-500 block text-sm hover:bg-gray-800 w-full rounded py-[1px] text-start"
+                >
                   <span className="text-gray-400 bi-arrow-up-right me-1"></span>{" "}
                   Memories.meet
-                </button>
+                </motion.button>
               </div>
             )}
           </div>
