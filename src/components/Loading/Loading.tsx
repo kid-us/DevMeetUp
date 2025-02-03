@@ -46,7 +46,7 @@ const Loading = () => {
                 delay: 0.3,
                 duration: 1,
               }}
-              className="flex justify-center items-center lg:text-2xl text-lg text-blue-400 font-bold"
+              className="flex justify-center items-center lg:text-xl text-lg text-blue-400"
             >
               {"<"}DevMeetUp <span className="bi-cup-hot-fill ms-2"></span>{" "}
               {"/>"}
@@ -62,7 +62,7 @@ const Loading = () => {
                   delay: v.delay,
                   duration: 0.5,
                 }}
-                className={`font-bold relative lg:text-xl ${
+                className={`relative lg:text-xl ${
                   v.version === "v3" ? "text-white" : "text-green-400"
                 }`}
               >
