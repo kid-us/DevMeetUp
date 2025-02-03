@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (previous && latest > previous && latest > 100) {
+    if (previous && latest > previous && latest > 80) {
       setHidden(true);
     } else {
       setHidden(false);
@@ -25,14 +25,11 @@ const Navbar = () => {
       <AnimatePresence>
         {!hidden && (
           <motion.div
-            exit={{ y: -140 }}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 10 }}
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{
-              duration: 0.2,
-              type: "spring",
-              damping: 40,
-              stiffness: 100,
+              duration: 1,
             }}
             className="fixed w-full top-0 left-0 z-50"
           >

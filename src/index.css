@@ -25,3 +25,18 @@
   --color-primary: #121212;
   --font-poppins: "poppins";
 }
+
+@layer base {
+  button {
+    @apply hover:scale-105 transition-transform;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  input {
+    @apply focus:outline-hidden;
+  }
+}
