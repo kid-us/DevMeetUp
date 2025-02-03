@@ -5,9 +5,7 @@ import Home from "./components/Pages/Home";
 function App() {
   return (
     <Routes>
-      <Route path="/">
-        <Home />
-      </Route>
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
