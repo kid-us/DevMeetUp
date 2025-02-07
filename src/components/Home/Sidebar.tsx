@@ -8,7 +8,7 @@ const Sidebar = () => {
     { id: 3, version: "v3" },
   ];
 
-  const [openedDirectory, setOpenDirectories] = useState<number[]>([3]);
+  const [openedDirectory, setOpenDirectories] = useState<number[]>([1, 2, 3]);
 
   const handleOpenDirectories = (id: number) => {
     if (openedDirectory.includes(id)) {

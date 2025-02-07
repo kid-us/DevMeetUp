@@ -25,3 +25,8 @@
   pointer-events: none;
   z-index: -1;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+}

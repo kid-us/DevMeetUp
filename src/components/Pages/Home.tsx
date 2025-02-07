@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
 import Loading from "../Loading/Loading";
-import Navbar from "../Navbar/Navbar";
-import Hero from "../Home/Hero";
+import VerticalAccordion from "../Home/Vertical";
+// import Navbar from "../Navbar/Navbar";
+// import Hero from "../Home/Hero";
 
 const Home = () => {
   return (
@@ -12,12 +13,14 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 6, duration: 2 }}
-        className="container mx-auto"
+        // className="container mx-auto"
       >
-        <Navbar />
-        <div className="pb-80">
+        {/* <Navbar />
+        <div className="pb-20">
           <Hero />
-        </div>
+        </div> */}
+
+        <VerticalAccordion />
       </motion.div>
     </div>
   );
