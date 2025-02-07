@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useWindowSize } from "./useWindowSize";
 import Hero from "./Hero";
+import Navbar from "../Navbar/Navbar";
 
 interface PanelProps {
   open: number;
@@ -48,13 +49,13 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
             exit="closed"
             className="overflow-y-scroll relative"
           >
-            <Hero />
-            <motion.div
-              initial="closed"
-              animate="open"
-              exit="closed"
-              className=""
-            ></motion.div>
+            <motion.div initial="closed" animate="open" exit="closed">
+              <Navbar />
+
+              <Hero />
+
+              {/*  */}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

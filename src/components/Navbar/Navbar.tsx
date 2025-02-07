@@ -31,32 +31,17 @@ const Navbar = () => {
         // transition={{
         //   duration: 1,
         // }}
+
         className=" w-full top-0 left-0 z-50"
       >
-        <div className="container mx-auto">
-          <div className="flex justify-between py-8 w-full">
+        <div className="container mx-auto mb-6">
+          <div className="flex justify-between pt-5 w-full">
             <Link
               to={"/"}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-500 via-green-500 to-white bg-clip-text text-transparent"
+              className="font-bold relative bg-black text-white py-[5px] px-8 shadow-[3px_4px_2px_0px_green]"
             >
-              {"<{"} <span className="bi-cup-hot-fill mx-1"></span>
-              {"}>"} DevMeetUp
+              {"{dev}"}
             </Link>
-
-            <div className="flex gap-x-10">
-              <Link
-                to={"/v1"}
-                className="font-bold text-zinc-400 hover:text-white transition-colors"
-              >
-                v1
-              </Link>
-              <Link
-                to={"/v1"}
-                className="font-bold text-zinc-400 hover:text-white transition-colors"
-              >
-                v2
-              </Link>
-            </div>
           </div>
         </div>
       </motion.div>
