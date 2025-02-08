@@ -1,14 +1,50 @@
+import { AnimatePresence, motion } from "motion/react";
 import EncryptButton from "./EncryptButton";
-import ImageChat from "./ImageChat";
+import { useEffect, useState } from "react";
+import { messages } from "../../services/messages";
+import { v3 } from "../../assets";
 
 const Hero = () => {
+  const [index, setIndex] = useState<number | null>(null);
+  const [showFinalMessage, setShowFinalMessage] = useState(false);
+
+  useEffect(() => {
+    const startTimeout = setTimeout(() => {
+      setIndex(0);
+
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => {
+          if (prevIndex === null || prevIndex >= messages.length - 1) {
+            clearInterval(interval);
+            setShowFinalMessage(true); // Show final message
+            return prevIndex;
+          }
+          return prevIndex + 1;
+        });
+      }, 3000); // 3 seconds per message
+
+      return () => clearInterval(interval);
+    }, 3000); // 3 seconds initial delay
+
+    return () => clearTimeout(startTimeout);
+  }, []);
+
+  const goodMessage =
+    "Joke aside, welcome to the Ethiopian Developer Community! Whether you're a beginner or a seasoned pro, we're here to learn, grow, and support each other in our journey through the world of tech. Let's code, share knowledge, and build something amazing together!";
+
+  const words = goodMessage.split(" ");
+
   return (
     <div className="h-[87dvh]">
       <div className="shine"></div>
       <div className="grid grid-cols-2">
-        <div className="flex justify-center items-center">
+        <div
+          className={`relative flex justify-center items-center ${
+            showFinalMessage && "mt-10 transition-all duration-300"
+          }`}
+        >
           <div>
-            <h1 className="text-6xl w-[80%] leading-14 font-extrabold">
+            <h1 className="text-6xl w-[80%] leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience
             </h1>
             <p className="text-gray-800 mt-5 w-[70%] text-sm">
@@ -17,14 +53,55 @@ const Hero = () => {
               network and innovate together!
             </p>
 
-            <div className="mt-10">
+            <div className="mt-5">
               <EncryptButton name="Register" />
             </div>
+
+            {/* Good Message */}
+            {showFinalMessage && (
+              <p className="mt-10 text-gray-800 text-shadow font-semibold text-lg">
+                {words.map((word, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ x: -30 }}
+                    whileInView={{ x: 0 }}
+                    transition={{ type: "spring", delay: index * 0.002 }}
+                    className="inline-block mr-2"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </p>
+            )}
           </div>
         </div>
 
-        <div>
-          <ImageChat />
+        <div className="relative">
+          <img src={v3} alt="Hero" className="w-[100%] relative" />
+          <AnimatePresence>
+            {index !== null && (
+              <motion.div
+                key={messages[index].id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 1 }}
+                className={`text-sm ${
+                  messages[index].vertical ? "px-2 py-4" : "px-4 py-2"
+                }  ${messages[index].style}`}
+              >
+                <p
+                  style={{
+                    writingMode: messages[index].vertical
+                      ? "vertical-lr"
+                      : "initial",
+                  }}
+                >
+                  {messages[index].msg}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>

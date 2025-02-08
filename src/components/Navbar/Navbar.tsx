@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="flex justify-between pt-5 w-full mb-10">
           <Link
             to={"/"}
-            className="font-bold relative bg-black/90 text-white py-[5px] px-8 shadow-[3px_4px_2px_0px_orange]"
+            className="font-bold relative bg-[#8CC84B] text-white py-[5px] px-8 shadow-[3px_4px_2px_0px_orange]"
           >
             {"{dev}"}
           </Link>
