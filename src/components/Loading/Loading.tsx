@@ -46,7 +46,7 @@ const Loading = () => {
                 delay: 0.3,
                 duration: 1,
               }}
-              className="flex justify-center items-center lg:text-xl text-lg text-blue-400"
+              className="flex justify-center items-center lg:text-xl text-lg font-bold text-shadow"
             >
               {"<"}DevMeetUp <span className="bi-cup-hot-fill ms-2"></span>{" "}
               {"/>"}
@@ -62,8 +62,8 @@ const Loading = () => {
                   delay: v.delay,
                   duration: 0.5,
                 }}
-                className={`relative lg:text-xl ${
-                  v.version === "v3" ? "text-white" : "text-green-400"
+                className={`relative lg:text-2xl ${
+                  v.version === "v3" ? "" : "text-green-700 font-extrabold"
                 }`}
               >
                 <motion.span
@@ -80,9 +80,7 @@ const Loading = () => {
                     repeatDelay: 0.5,
                   }}
                   className={`absolute -top-2 -right-4 ${v.icon} ${
-                    v.version === "v3"
-                      ? "text-sm text-yellow-400"
-                      : "text-white"
+                    v.version === "v3" ? "text-lg text-yellow-600" : ""
                   } `}
                 />
                 {v.version}

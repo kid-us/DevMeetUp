@@ -21,10 +21,10 @@ const Hero = () => {
           }
           return prevIndex + 1;
         });
-      }, 3000); // 3 seconds per message
+      }, 4000); // 3 seconds per message
 
       return () => clearInterval(interval);
-    }, 3000); // 3 seconds initial delay
+    }, 7000); // 3 seconds initial delay
 
     return () => clearTimeout(startTimeout);
   }, []);
