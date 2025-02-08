@@ -2,6 +2,7 @@ import { useState } from "react";
 import Panel from "./Panel";
 import Navbar from "../Navbar/Navbar";
 import Hero from "./Hero";
+import { v1, v2, v3 } from "../../assets";
 
 interface Item {
   id: number;
@@ -14,19 +15,19 @@ const items: Item[] = [
   {
     id: 1,
     title: "Version 3",
-    Icon: "bi-gear-fill",
+    Icon: v3,
     bg: "bg-[#61DAFB]",
   },
   {
     id: 2,
     title: "Version 2",
-    Icon: "bi-gear-fill",
+    Icon: v2,
     bg: "bg-[#8CC84B]",
   },
   {
     id: 3,
     title: "Version 1",
-    Icon: "bi-gear-fill",
+    Icon: v1,
     bg: "bg-[#F8981D]",
   },
 ];
@@ -58,7 +59,7 @@ const VerticalAccordion = () => {
         onClick={() => setOpen(0)}
         className={`absolute ${
           open === 2 ? "right-36" : open === 3 ? "right-20" : "right-48"
-        }   bi-house-fill mt-5 w-8 h-8 rounded text-xl`}
+        }   bi-house-fill mt-6 w-8 h-8 rounded text-xl`}
       ></button>
     </div>
   );

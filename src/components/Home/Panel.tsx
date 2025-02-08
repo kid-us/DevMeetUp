@@ -74,7 +74,7 @@ const Panel: React.FC<PanelProps> = ({
         } transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group shadow border-l border-gray-400`}
         onClick={() => setOpen(id)}
       >
-        <span className={`${icon} mb-3`}></span>
+        <img src={icon} className={`mb-3 w-5 h-5`}></img>
 
         {title.split("").map((t) => (
           <span className="leading-1 uppercase">{t}</span>

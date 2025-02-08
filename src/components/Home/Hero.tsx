@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import EncryptButton from "./EncryptButton";
 import { useEffect, useState } from "react";
 import { messages } from "../../services/messages";
-import { v3 } from "../../assets";
+import { hero } from "../../assets";
 
 const Hero = () => {
   const [index, setIndex] = useState<number | null>(null);
@@ -53,10 +53,6 @@ const Hero = () => {
               network and innovate together!
             </p>
 
-            <div className="mt-5">
-              <EncryptButton name="Register" />
-            </div>
-
             {/* Good Message */}
             {showFinalMessage && (
               <p className="mt-10 text-soft font-semibold">
@@ -73,11 +69,15 @@ const Hero = () => {
                 ))}
               </p>
             )}
+
+            <div className="mt-5">
+              <EncryptButton name="Register" />
+            </div>
           </div>
         </div>
 
         <div className="relative">
-          <img src={v3} alt="Hero" className="w-[100%] relative" />
+          <img src={hero} alt="Hero" className="w-[100%] relative" />
           <AnimatePresence>
             {index !== null && (
               <motion.div
@@ -87,7 +87,7 @@ const Hero = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 1 }}
                 className={`text-sm ${
-                  messages[index].vertical ? "px-2 py-4" : "px-4 py-2"
+                  messages[index].vertical ? "px-3 py-4" : "px-4 py-3"
                 }  ${messages[index].style}`}
               >
                 <p
