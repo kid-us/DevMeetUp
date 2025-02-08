@@ -19,7 +19,10 @@
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: #fff; /* You can use 242424, 10100e, or 121212 for dark themes */
+  background-color: #fff;
+  /* You can use 242424, 10100e, or 121212 for dark themes */
+
+  /* background-color: black; */
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,28 +38,6 @@
   --font-approach: "approach";
   --font-poppins: "poppins";
 }
-
-/* Default Text Color (for regular text):
-
-Hex: #E0E0E0
-Keywords (e.g., function names, variables):
-
-Hex: #C792EA
-Strings (e.g., text literals):
-
-Hex: #80CBC4
-Comments:
-
-Hex: #546E7A
-Functions:
-
-Hex: #FFCB6B
-Variables:
-
-Hex: #EEFFFF
-Classes and Types:
-
-Hex: #FF79C6 */
 
 @layer base {
   button {
@@ -80,4 +61,16 @@ Hex: #FF79C6 */
   input {
     @apply focus:outline-hidden;
   }
+}
+
+.shine {
+  background-image: linear-gradient(220deg, #fffcff 10%, #ffffff 51%);
+  bottom: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: auto;
 }

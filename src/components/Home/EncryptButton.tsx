@@ -10,8 +10,6 @@ const SHUFFLE_TIME: number = 50;
 const CHARS: string = "!@#$%^&*():{};|,.<>/?";
 
 const EncryptButton = ({ name }: Props) => {
-  console.log(name);
-
   const intervalRef = useRef<number | null>(null);
   const [text, setText] = useState<string>(name);
 
