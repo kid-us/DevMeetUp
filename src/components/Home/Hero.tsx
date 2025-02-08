@@ -44,7 +44,7 @@ const Hero = () => {
           }`}
         >
           <div>
-            <h1 className="text-6xl w-[80%] leading-14 font-extrabold text-shadow">
+            <h1 className="text-6xl w-[82%] leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience
             </h1>
             <p className="text-soft-text mt-5 w-[70%] text-sm">
