@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Panel from "./Panel";
+import Navbar from "../Navbar/Navbar";
+import Hero from "./Hero";
 
 interface Item {
   id: number;
@@ -26,23 +28,32 @@ const items: Item[] = [
 ];
 
 const VerticalAccordion = () => {
-  const [open, setOpen] = useState<number>(items[0].id);
+  const [open, setOpen] = useState<number>(0);
 
   return (
-    <section className="">
-      <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto shadow overflow-hidden rounded">
-        {items.map((item) => (
-          <Panel
-            key={item.id}
-            open={open}
-            setOpen={setOpen}
-            id={item.id}
-            icon={item.Icon}
-            title={item.title}
-          />
-        ))}
-      </div>
-    </section>
+    <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto shadow overflow-hidden rounded">
+      {open === 0 && (
+        <div className="container mx-auto">
+          <Navbar />
+          <Hero />
+        </div>
+      )}
+      <div className=""></div>
+      {items.map((item) => (
+        <Panel
+          key={item.id}
+          open={open}
+          setOpen={setOpen}
+          id={item.id}
+          icon={item.Icon}
+          title={item.title}
+        />
+      ))}
+      <button
+        onClick={() => setOpen(0)}
+        className="absolute right-48 bg-black text-white  bi-house-fill mt-3 w-8 h-8 rounded"
+      ></button>
+    </div>
   );
 };
 

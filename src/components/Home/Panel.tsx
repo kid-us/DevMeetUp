@@ -51,10 +51,7 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
           >
             <motion.div initial="closed" animate="open" exit="closed">
               <Navbar />
-
               <Hero />
-
-              {/*  */}
             </motion.div>
           </motion.div>
         )}
@@ -63,13 +60,13 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
       <button
         className={`${
           open === id ? "bg-black/90 text-blue-400" : "bg-white text-black"
-        }  transition-colors px-5 border-b-[1px] border-r border-slate-400 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group`}
+        }  transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group shadow border-l border-gray-400`}
         onClick={() => setOpen(id)}
       >
         <span className={`${icon} mb-3`}></span>
 
         {title.split("").map((t) => (
-          <span className="leading-1 uppercase font-semibold">{t}</span>
+          <span className="leading-1 uppercase">{t}</span>
         ))}
       </button>
     </>
