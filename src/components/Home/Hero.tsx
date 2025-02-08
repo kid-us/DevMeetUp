@@ -47,7 +47,7 @@ const Hero = () => {
             <h1 className="text-6xl w-[80%] leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience
             </h1>
-            <p className="text-soft mt-5 w-[70%] text-sm">
+            <p className="text-soft-text mt-5 w-[70%] text-sm">
               Connect with fellow developers, share ideas, amd elevate your
               skills at our upcoming meeting. Don't miss this opportunity to
               network and innovate together!

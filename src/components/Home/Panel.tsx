@@ -71,7 +71,7 @@ const Panel: React.FC<PanelProps> = ({
           open === id
             ? "bg-black/90 text-white font-semibold"
             : `${bg} text-black`
-        }  transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group shadow border-l border-gray-400`}
+        } transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group shadow border-l border-gray-400`}
         onClick={() => setOpen(id)}
       >
         <span className={`${icon} mb-3`}></span>

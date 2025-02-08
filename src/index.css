@@ -29,7 +29,7 @@
   --btn-color: #fff !important;
   --gradient1: #e6e4e6;
   --gradient2: #ffffff;
-  --soft: #1f2937;
+  --soft-text: #1f2937;
   --shadow: #8cc84b;
   background: var(--background);
 }
@@ -41,7 +41,7 @@
   --background: #10100e;
   --gradient1: #858285;
   --gradient2: #121212;
-  --soft: #d1d5db;
+  --soft-text: #d1d5db;
   --shadow: #f3f4f2;
 
   background: var(--background);
