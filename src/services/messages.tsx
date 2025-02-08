@@ -157,7 +157,7 @@ export const messages: Message[] = [
   },
   {
     id: 26,
-    msg: "ሊመቱኝን ነው እንዴ",
+    msg: "ሊመቱኝ ነው እንዴ",
     style:
       "rounded-r-xl rounded-bl-2xl shadow-[2px_2px_2px_0px_black] absolute -bottom-5 right-3 bg-[#007ACC] text-white",
   },

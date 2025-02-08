@@ -1,40 +1,53 @@
 @import "tailwindcss";
 
+@config "../tailwind.config.js";
+
 @font-face {
   font-family: "approach";
   src: url("./assets/fonts/Fontspring-DEMO-coresansc45.otf") format("opentype"); /* Fixed format */
-  /* font-weight: bolder; */
-  /* font-style: normal; */
 }
 
 @font-face {
   font-family: "poppins";
   src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2"); /* Fixed format */
-  /* font-weight: normal; */
-  /* font-style: normal; */
 }
 
 :root {
-  font-family: "poppins", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  background-color: #fff;
   /* You can use 242424, 10100e, or 121212 for dark themes */
-
-  /* background-color: black; */
-
+  font-family: "poppins";
+  line-height: 1.5;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.light {
+  color: #000;
+  --background: #fff;
+  --btn: #242424;
+  --btn-color: #fff !important;
+  --gradient1: #e6e4e6;
+  --gradient2: #ffffff;
+  --soft: #1f2937;
+  --shadow: #8cc84b;
+  background: var(--background);
+}
+
+.dark {
+  color: #fff;
+  --btn: #fff;
+  --btn-color: #000 !important;
+  --background: #10100e;
+  --gradient1: #858285;
+  --gradient2: #121212;
+  --soft: #d1d5db;
+  --shadow: #f3f4f2;
+
+  background: var(--background);
+}
+
 @theme {
-  --color-primary: #121212;
-  --color-variable: #9cdcfe;
-  --color-class: #ffcb6b;
-  --color-function: #dcdcaa;
-  --color-comment: #6a9955;
   --font-approach: "approach";
   --font-poppins: "poppins";
 }
@@ -64,7 +77,11 @@
 }
 
 .shine {
-  background-image: linear-gradient(220deg, #fffcff 10%, #ffffff 51%);
+  background-image: linear-gradient(
+    220deg,
+    var(--gradient1) 10%,
+    var(--gradient2) 51%
+  );
   bottom: 0;
   opacity: 0.5;
   position: fixed;
@@ -73,4 +90,8 @@
   z-index: -2;
   width: 100%;
   height: auto;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px var(--shadow);
 }

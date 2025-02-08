@@ -48,7 +48,7 @@ const Navbar = () => {
             onClick={toggleTheme}
             className={`${
               savedTheme === "light" ? "bi-moon-fill" : "bi-brightness-high"
-            } text-black me-14 text-xl`}
+            } me-14 text-xl`}
           ></button>
         </div>
       </motion.div>
