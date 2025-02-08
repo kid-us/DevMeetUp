@@ -1,20 +1,25 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: "approach";
+  src: url("./assets/fonts/Fontspring-DEMO-coresansc45.otf") format("opentype"); /* Fixed format */
+  /* font-weight: bolder; */
+  /* font-style: normal; */
+}
+
+@font-face {
   font-family: "poppins";
-  src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  src: url("./assets/fonts/Poppins-Regular.woff2") format("woff2"); /* Fixed format */
+  /* font-weight: normal; */
+  /* font-style: normal; */
 }
 
 :root {
-  font-family: "poppins";
+  font-family: "poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #fff; /* 242424 10100e 121212*/
+  background-color: #fff; /* You can use 242424, 10100e, or 121212 for dark themes */
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,12 +28,48 @@
 
 @theme {
   --color-primary: #121212;
+  --color-variable: #9cdcfe;
+  --color-class: #ffcb6b;
+  --color-function: #dcdcaa;
+  --color-comment: #6a9955;
+  --font-approach: "approach";
   --font-poppins: "poppins";
 }
+
+/* Default Text Color (for regular text):
+
+Hex: #E0E0E0
+Keywords (e.g., function names, variables):
+
+Hex: #C792EA
+Strings (e.g., text literals):
+
+Hex: #80CBC4
+Comments:
+
+Hex: #546E7A
+Functions:
+
+Hex: #FFCB6B
+Variables:
+
+Hex: #EEFFFF
+Classes and Types:
+
+Hex: #FF79C6 */
 
 @layer base {
   button {
     @apply hover:scale-105 transition-transform;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-approach;
   }
 
   button:not(:disabled),

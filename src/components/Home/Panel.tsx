@@ -47,7 +47,7 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
             initial="closed"
             animate="open"
             exit="closed"
-            className="overflow-y-scroll relative"
+            className="overflow-y-scroll relative container mx-auto"
           >
             <motion.div initial="closed" animate="open" exit="closed">
               <Navbar />
@@ -62,7 +62,7 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
 
       <button
         className={`${
-          open === id ? "bg-red-500 text-white" : "bg-white text-black"
+          open === id ? "bg-black/90 text-blue-400" : "bg-white text-black"
         }  transition-colors px-5 border-b-[1px] border-r border-slate-400 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group`}
         onClick={() => setOpen(id)}
       >
