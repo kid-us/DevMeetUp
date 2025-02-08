@@ -2,6 +2,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useWindowSize } from "./useWindowSize";
 import Hero from "./Hero";
 import Navbar from "../Navbar/Navbar";
+import Version1 from "../Pages/V1";
+import Version2 from "../Pages/V2";
+import Version3 from "../Pages/V3";
 
 interface PanelProps {
   open: number;
@@ -59,7 +62,10 @@ const Panel: React.FC<PanelProps> = ({
           >
             <motion.div initial="closed" animate="open" exit="closed">
               <Navbar />
-              <Hero />
+              {id === 0 && <Hero />}
+              {id === 1 && <Version1 />}
+              {id === 2 && <Version2 />}
+              {id === 3 && <Version3 />}
             </motion.div>
           </motion.div>
         )}

@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex justify-between pt-5 w-full mb-10">
           <Link
             to={"/"}
-            className="font-bold relative bg-[#306998] text-white py-[8px] px-8 shadow-[3px_4px_2px_0px_orange]"
+            className="font-bold relative bg-[#306998] text-white py-[8px] px-8 shadow-[3px_4px_2px_0px_orange] text-sm"
           >
             {"{ DevMeetUp }"}
           </Link>
