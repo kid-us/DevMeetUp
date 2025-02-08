@@ -7,6 +7,7 @@ interface Item {
   id: number;
   title: string;
   Icon: string;
+  bg: string;
 }
 
 const items: Item[] = [
@@ -14,16 +15,19 @@ const items: Item[] = [
     id: 1,
     title: "Version 3",
     Icon: "bi-gear-fill",
+    bg: "bg-[#61DAFB]",
   },
   {
     id: 2,
     title: "Version 2",
     Icon: "bi-gear-fill",
+    bg: "bg-[#8CC84B]",
   },
   {
     id: 3,
     title: "Version 1",
     Icon: "bi-gear-fill",
+    bg: "bg-[#F8981D]",
   },
 ];
 
@@ -47,6 +51,7 @@ const VerticalAccordion = () => {
           id={item.id}
           icon={item.Icon}
           title={item.title}
+          bg={item.bg}
         />
       ))}
       <button

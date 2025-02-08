@@ -59,7 +59,7 @@ const Hero = () => {
 
             {/* Good Message */}
             {showFinalMessage && (
-              <p className="mt-10 text-soft text-shadow font-semibold text-lg">
+              <p className="mt-10 text-soft font-semibold">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
