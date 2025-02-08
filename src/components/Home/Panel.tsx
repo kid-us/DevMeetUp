@@ -39,7 +39,7 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
 
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence key={`panel-${title}`}>
         {isOpen && (
           <motion.div
             key={`panel-${id}`}
@@ -58,6 +58,7 @@ const Panel: React.FC<PanelProps> = ({ open, setOpen, id, icon, title }) => {
       </AnimatePresence>
 
       <button
+        key={`button-${id}`}
         className={`${
           open === id ? "bg-black/90 text-blue-400" : "bg-white text-black"
         }  transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 relative group shadow border-l border-gray-400`}

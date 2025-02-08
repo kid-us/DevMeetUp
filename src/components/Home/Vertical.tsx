@@ -51,7 +51,7 @@ const VerticalAccordion = () => {
       ))}
       <button
         onClick={() => setOpen(0)}
-        className="absolute right-48 bg-black text-white  bi-house-fill mt-3 w-8 h-8 rounded"
+        className="absolute right-48  bi-house-fill mt-5 w-8 h-8 rounded text-xl"
       ></button>
     </div>
   );
