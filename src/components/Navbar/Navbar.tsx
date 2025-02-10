@@ -69,7 +69,7 @@ const Navbar = () => {
                 toggleTheme;
                 setViewMenu(true);
               }}
-              className={`bi-list lg:me-14 text-2xl`}
+              className={`lg:hidden block bi-list lg:me-14 text-2xl`}
             ></button>
           </div>
         </div>

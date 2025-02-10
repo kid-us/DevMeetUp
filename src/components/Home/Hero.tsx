@@ -55,7 +55,7 @@ const Hero = () => {
 
             {/* Good Message */}
             {showFinalMessage && (
-              <p className="lg:block hidden mt-10 text-soft font-semibold">
+              <p className="lg:block hidden mt-10 text-soft">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
@@ -70,7 +70,7 @@ const Hero = () => {
               </p>
             )}
 
-            <div className="mt-5">
+            <div className="lg:mt-5 mt-10">
               <EncryptButton name="Register" />
             </div>
 
