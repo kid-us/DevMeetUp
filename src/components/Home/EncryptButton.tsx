@@ -54,7 +54,7 @@ const EncryptButton = ({ name }: Props) => {
       whileTap={{ scale: 0.975 }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="bg-btn px-4 py-2 font-mono transition-colors hover:shadow-none text-btn-color w-40 text-center shadow-[3px_3px_3px_0px_red]"
+      className="bg-btn py-3 font-mono transition-colors hover:shadow-none text-btn-color w-48 text-center rounded-lg"
     >
       <div className="relative z-10 gap-2">
         <span>{text}</span>
