@@ -48,7 +48,7 @@ const Menu = ({ onClose, menuAnimation }: Props) => {
       >
         <div className="py-7 px-5">
           <div className="flex justify-between text-xl mb-10">
-            <Link to={"/"} className="font-bold relative py-[8px] text-xl">
+            <Link to={"/"} className="font-semibold relative py-[8px] text-xl">
               {"{DevMeetUp}"}
             </Link>
 

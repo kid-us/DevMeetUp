@@ -56,7 +56,7 @@ const EncryptButton = ({ name }: Props) => {
       onMouseLeave={stopScramble}
       className="bg-btn py-3 font-mono transition-colors hover:shadow-none text-btn-color w-48 text-center rounded-lg"
     >
-      <div className="relative z-10 gap-2">
+      <div className="relative z-10 gap-2 font-semibold">
         <span>{text}</span>
       </div>
     </motion.button>

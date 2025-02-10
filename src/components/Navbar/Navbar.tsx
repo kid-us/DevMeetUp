@@ -53,7 +53,7 @@ const Navbar = () => {
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
         <div className="flex justify-between pt-5 w-full mb-10">
-          <Link to={"/"} className="font-bold relative py-[8px] text-xl">
+          <Link to={"/"} className="font-semibold relative py-[8px] text-xl">
             {"{DevMeetUp}"}
           </Link>
           <div className="flex gap-x-5">

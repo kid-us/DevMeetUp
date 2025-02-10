@@ -37,17 +37,17 @@ const Hero = () => {
   return (
     <div className="h-[87dvh]">
       <div className="shine"></div>
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2">
         <div
           className={`relative flex justify-center items-center ${
             showFinalMessage && "mt-10 transition-all duration-300"
           }`}
         >
           <div>
-            <h1 className="text-6xl w-[82%] leading-14 font-extrabold text-shadow">
+            <h1 className="lg:text-6xl text-4xl lg:w-[82%] lg:leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience
             </h1>
-            <p className="text-soft-text mt-5 w-[70%] text-sm">
+            <p className="text-soft-text mt-5 l:w-[70%] lg:text-sm">
               Connect with fellow developers, share ideas, amd elevate your
               skills at our upcoming meeting. Don't miss this opportunity to
               network and innovate together!
@@ -55,7 +55,7 @@ const Hero = () => {
 
             {/* Good Message */}
             {showFinalMessage && (
-              <p className="mt-10 text-soft font-semibold">
+              <p className="lg:block hidden mt-10 text-soft font-semibold">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
@@ -73,10 +73,23 @@ const Hero = () => {
             <div className="mt-5">
               <EncryptButton name="Register" />
             </div>
+
+            {/* Only on Small device */}
+            <div className="lg:hidden block my-12">
+              <p className="text-2xl font-bold">Hey Devs 👋</p>
+              <p className="mt-3 text-lg">
+                Welcome to the Ethiopian Developer Community! Whether you're a
+                beginner or a seasoned pro, we're here to learn, grow, and
+                support each other in our journey through the world of tech.
+                Let's code, share knowledge, and build something amazing
+                together!
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="relative">
+        {/* Only on Large device */}
+        <div className="relative lg:block hidden">
           <img src={hero} alt="Hero" className="w-[100%] relative" />
           <AnimatePresence>
             {index !== null && (
