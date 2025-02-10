@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
 const Navbar = () => {
   const [savedTheme, setSavedTheme] = useState<string>("");
+  const [viewMenu, setViewMenu] = useState<boolean>(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -35,6 +37,18 @@ const Navbar = () => {
     setSavedTheme(newTheme);
   };
 
+  const [animationClass, setAnimationClass] = useState<string>(
+    "animate__fadeInLeft"
+  );
+
+  const handleCloseMenu = () => {
+    setAnimationClass("animate__fadeOutLeft");
+    setTimeout(() => {
+      setViewMenu(false);
+      setAnimationClass("animate__fadeInLeft");
+    }, 500);
+  };
+
   return (
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
@@ -51,12 +65,23 @@ const Navbar = () => {
             ></button>
 
             <button
-              onClick={toggleTheme}
+              onClick={() => {
+                toggleTheme;
+                setViewMenu(true);
+              }}
               className={`bi-list lg:me-14 text-2xl`}
             ></button>
           </div>
         </div>
       </motion.div>
+
+      {/* Menu */}
+      {viewMenu && (
+        <Menu
+          onClose={() => handleCloseMenu()}
+          menuAnimation={animationClass}
+        />
+      )}
     </>
   );
 };

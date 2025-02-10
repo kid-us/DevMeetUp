@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "animate.css";
 import Home from "./components/Pages/Home";
 
 function App() {
