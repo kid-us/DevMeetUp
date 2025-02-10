@@ -73,7 +73,7 @@ const Menu = ({ onClose, menuAnimation }: Props) => {
               //   initial={{ opacity: 0 }}
               //   animate={{ opacity: 1 }}
               //   transition={{ delay: 0.3, duration: 0.5 }}
-              className="rounded-xl border border-gray-500 p-9"
+              className="rounded-xl border border-gray-500 p-9 bg-[#61DAFB]"
             >
               Version 1
             </motion.a>
@@ -82,7 +82,7 @@ const Menu = ({ onClose, menuAnimation }: Props) => {
               //   initial={{ opacity: 0 }}
               //   animate={{ opacity: 1 }}
               //   transition={{ delay: 0.3, duration: 0.5 }}
-              className="rounded-xl border border-gray-500 p-9"
+              className="rounded-xl border border-gray-500 p-9 bg-[#8CC84B]"
             >
               Version 2
             </motion.a>
@@ -91,7 +91,7 @@ const Menu = ({ onClose, menuAnimation }: Props) => {
               //   initial={{ opacity: 0 }}
               //   animate={{ opacity: 1 }}
               //   transition={{ delay: 0.3, duration: 0.5 }}
-              className="rounded-xl border border-gray-500 p-9"
+              className="rounded-xl border border-gray-500 p-9 bg-[#61DAFB]"
             >
               Version 3
             </motion.a>
