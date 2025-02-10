@@ -34,19 +34,27 @@ const Navbar = () => {
     localStorage.setItem("theme", newTheme);
     setSavedTheme(newTheme);
   };
+
   return (
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
         <div className="flex justify-between pt-5 w-full mb-10">
-          <Link to={"/"} className="font-bold relative py-[8px]">
+          <Link to={"/"} className="font-bold relative py-[8px] text-xl">
             {"{DevMeetUp}"}
           </Link>
-          <button
-            onClick={toggleTheme}
-            className={`${
-              savedTheme === "light" ? "bi-moon-fill" : "bi-brightness-high"
-            } me-14 text-xl`}
-          ></button>
+          <div className="flex gap-x-5">
+            <button
+              onClick={toggleTheme}
+              className={`${
+                savedTheme === "light" ? "bi-moon-fill" : "bi-brightness-high"
+              } lg:me-14 text-xl`}
+            ></button>
+
+            <button
+              onClick={toggleTheme}
+              className={`bi-list lg:me-14 text-2xl`}
+            ></button>
+          </div>
         </div>
       </motion.div>
     </>
