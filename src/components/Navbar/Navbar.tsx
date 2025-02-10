@@ -38,11 +38,8 @@ const Navbar = () => {
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
         <div className="flex justify-between pt-5 w-full mb-10">
-          <Link
-            to={"/"}
-            className="font-bold relative bg-[#306998] text-white py-[8px] px-8 shadow-[3px_4px_2px_0px_orange] text-sm"
-          >
-            {"{ DevMeetUp }"}
+          <Link to={"/"} className="font-bold relative py-[8px]">
+            {"{DevMeetUp}"}
           </Link>
           <button
             onClick={toggleTheme}
