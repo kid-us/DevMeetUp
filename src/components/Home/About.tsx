@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { calendar, developers, events } from "../../assets";
+import { calendar, developers, events, tech } from "../../assets";
 import AnimatedNumbers from "./AnimatedNumbers";
+import Memories from "./Memories";
 
 const About = () => {
   const message =
@@ -12,7 +13,7 @@ const About = () => {
   const stats = [
     { id: 1, icon: developers, title: "Community Members", target: 5000 },
     { id: 2, icon: events, title: "Events Organized", target: 100 },
-    { id: 3, icon: events, title: "Tech Partners", target: 50 },
+    { id: 3, icon: tech, title: "Tech Partners", target: 50 },
     { id: 4, icon: calendar, title: "Years of Impact", target: 3 },
   ];
 
@@ -162,6 +163,9 @@ const About = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Memories */}
+      <Memories />
     </>
   );
 };
