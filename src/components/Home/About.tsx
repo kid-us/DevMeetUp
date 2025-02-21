@@ -23,11 +23,11 @@ const About = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="flex justify-center"
       >
-        <div className="w-[90%] text-center mt-14">
+        <div className="lg:w-[90%] text-center lg:mt-14 mt-20">
           <p className="uppercase mb-5 text-color font-medium">
             <span className="bi-stars me-2"></span> About Us
           </p>
-          <p className="text-3xl font-medium">
+          <p className="lg:text-3xl text-2xl font-medium">
             {words.map((word, index) => (
               <motion.span
                 key={index}
@@ -43,11 +43,14 @@ const About = () => {
         </div>
       </motion.div>
       {/* Stats */}
-      <div className="flex lg:justify-center lg:items-center mt-14 gap-x-20">
+      <div className="lg:flex lg:justify-center lg:items-center grid grid-cols-2 mt-14 lg:gap-x-20">
         {stats.map((stat, index) => (
-          <div
-            className={`text-center ${index % 2 === 0 ? "" : "lg:mt-24 mt-10"}`}
+          <motion.div
             key={index}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className={`text-center ${index % 2 === 0 ? "" : "lg:mt-24 mt-20"}`}
           >
             <div className="flex justify-center mb-3">
               <img src={stat.icon} alt={stat.title} className="w-12" />
@@ -56,7 +59,7 @@ const About = () => {
             <p className="font-medium uppercase text-zinc-500 mt-2">
               {stat.title}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

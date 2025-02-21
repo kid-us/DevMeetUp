@@ -29,13 +29,8 @@ const Hero = () => {
     return () => clearTimeout(startTimeout);
   }, []);
 
-  // const goodMessage =
-  //   "Joke aside, welcome to the Ethiopian Developer Community! Whether you're a beginner or a seasoned pro, we're here to learn, grow, and support each other in our journey through the world of tech. Let's code, share knowledge, and build something amazing together!";
-
-  // const words = goodMessage.split(" ");
-
   return (
-    <div className="h-[87dvh]">
+    <div className="lg:h-[87dvh]">
       <div className="shine"></div>
       <div className="grid lg:grid-cols-2">
         <div
@@ -54,37 +49,8 @@ const Hero = () => {
               network and innovate together!
             </p>
 
-            {/* Good Message */}
-            {/* {showScrollAnimation && (
-              <p className="lg:block hidden my-10 text-soft">
-                {words.map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ x: -30 }}
-                    whileInView={{ x: 0 }}
-                    transition={{ type: "spring", delay: index * 0.002 }}
-                    className="inline-block mr-2"
-                  >
-                    {word}
-                  </motion.span>
-                ))}
-              </p>
-            )} */}
-
             <div className="lg:mt-5 mt-10">
               <EncryptButton name="Register" />
-            </div>
-
-            {/* Only on Small device */}
-            <div className="lg:hidden block my-12">
-              <p className="text-2xl font-bold">Hey Devs 👋</p>
-              <p className="mt-3 text-lg">
-                Welcome to the Ethiopian Developer Community! Whether you're a
-                beginner or a seasoned pro, we're here to learn, grow, and
-                support each other in our journey through the world of tech.
-                Let's code, share knowledge, and build something amazing
-                together!
-              </p>
             </div>
           </div>
         </div>
