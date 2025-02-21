@@ -3,6 +3,7 @@ import Loading from "../Loading/Loading";
 import VerticalAccordion from "../Home/Vertical";
 import Hero from "../Home/Hero";
 import Navbar from "../Navbar/Navbar";
+import About from "../Home/About";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <div className="container mx-auto lg:hidden block">
           <Navbar />
           <Hero />
+          <About />
         </div>
       </motion.div>
     </div>

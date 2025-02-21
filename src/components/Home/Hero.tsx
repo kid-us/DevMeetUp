@@ -6,7 +6,7 @@ import { hero } from "../../assets";
 
 const Hero = () => {
   const [index, setIndex] = useState<number | null>(null);
-  const [showFinalMessage, setShowFinalMessage] = useState(false);
+  const [showScrollAnimation, setShowScrollAnimation] = useState(false);
 
   useEffect(() => {
     const startTimeout = setTimeout(() => {
@@ -16,7 +16,7 @@ const Hero = () => {
         setIndex((prevIndex) => {
           if (prevIndex === null || prevIndex >= messages.length - 1) {
             clearInterval(interval);
-            setShowFinalMessage(true); // Show final message
+            setShowScrollAnimation(true); // Show final message
             return prevIndex;
           }
           return prevIndex + 1;
@@ -29,19 +29,20 @@ const Hero = () => {
     return () => clearTimeout(startTimeout);
   }, []);
 
-  const goodMessage =
-    "Joke aside, welcome to the Ethiopian Developer Community! Whether you're a beginner or a seasoned pro, we're here to learn, grow, and support each other in our journey through the world of tech. Let's code, share knowledge, and build something amazing together!";
+  // const goodMessage =
+  //   "Joke aside, welcome to the Ethiopian Developer Community! Whether you're a beginner or a seasoned pro, we're here to learn, grow, and support each other in our journey through the world of tech. Let's code, share knowledge, and build something amazing together!";
 
-  const words = goodMessage.split(" ");
+  // const words = goodMessage.split(" ");
 
   return (
     <div className="h-[87dvh]">
       <div className="shine"></div>
       <div className="grid lg:grid-cols-2">
         <div
-          className={`relative flex justify-center items-center ${
-            showFinalMessage && "mt-10 transition-all duration-300"
-          }`}
+          className={`relative flex justify-center items-center 
+            ${showScrollAnimation && "mt-10 transition-all duration-300"}
+            
+          `}
         >
           <div>
             <h1 className="lg:text-6xl text-4xl lg:w-[82%] lg:leading-14 font-extrabold text-shadow">
@@ -54,7 +55,7 @@ const Hero = () => {
             </p>
 
             {/* Good Message */}
-            {showFinalMessage && (
+            {/* {showScrollAnimation && (
               <p className="lg:block hidden my-10 text-soft">
                 {words.map((word, index) => (
                   <motion.span
@@ -68,7 +69,7 @@ const Hero = () => {
                   </motion.span>
                 ))}
               </p>
-            )}
+            )} */}
 
             <div className="lg:mt-5 mt-10">
               <EncryptButton name="Register" />

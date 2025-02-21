@@ -2,10 +2,12 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
+import usePanelStore from "../../store/store";
 
 const Navbar = () => {
   const [savedTheme, setSavedTheme] = useState<string>("");
   const [viewMenu, setViewMenu] = useState<boolean>(false);
+  const { setOpenTab } = usePanelStore();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -53,7 +55,11 @@ const Navbar = () => {
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
         <div className="flex justify-between pt-5 w-full mb-10">
-          <Link to={"/"} className="font-semibold relative py-[8px]">
+          <Link
+            to={"/"}
+            onClick={() => setOpenTab(0)}
+            className="font-semibold relative py-[8px]"
+          >
             {"{DevMeetUp}"}
           </Link>
           <div className="flex gap-x-5">
