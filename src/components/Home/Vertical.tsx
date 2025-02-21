@@ -16,19 +16,19 @@ const items: Item[] = [
     id: 1,
     title: "Version 3",
     Icon: v3,
-    bg: "bg-[#61DAFB]",
+    bg: "bg-background",
   },
   {
     id: 2,
     title: "Version 2",
     Icon: v2,
-    bg: "bg-[#8CC84B]",
+    bg: "bg-background",
   },
   {
     id: 3,
     title: "Version 1",
     Icon: v1,
-    bg: "bg-[#F8981D]",
+    bg: "bg-background",
   },
 ];
 

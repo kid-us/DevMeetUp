@@ -9,6 +9,8 @@ module.exports = {
         btn: "var(--btn)",
         btnColor: "var(--btn-color)",
         softText: "var(--soft-text)",
+        panelText: "var(--panel-text)",
+        panelBorder: "var(--panel-border)",
       },
       screen: {
         sm: "640px", // Small devices (landscape phones)
