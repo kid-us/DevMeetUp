@@ -10,9 +10,9 @@ interface Version {
 
 const Loading = () => {
   const versions: Version[] = [
-    { id: 1, icon: "bi-check", version: "V1", delay: 0.6 },
-    { id: 2, icon: "bi-check", version: "V2", delay: 0.9 },
-    { id: 2, icon: "bi-hourglass-top", version: "V3", delay: 1.2 },
+    { id: 1, icon: "bi-check", version: "V1", delay: 0.2 },
+    { id: 2, icon: "bi-check", version: "V2", delay: 0.5 },
+    { id: 2, icon: "bi-hourglass-top", version: "V3", delay: 0.8 },
   ];
 
   const [show, setShow] = useState(true);
@@ -33,8 +33,8 @@ const Loading = () => {
             initial={{ opacity: 1 }}
             animate={{ opacity: [0.8, 0.5, 0.3, 0] }}
             transition={{
-              delay: 3,
-              duration: 3,
+              delay: 1,
+              duration: 2,
             }}
             className="flex lg:justify-center items-center lg:gap-x-10 md:gap-x-8 gap-x-8 h-screen mx-3"
           >

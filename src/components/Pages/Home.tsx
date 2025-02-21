@@ -12,7 +12,7 @@ const Home = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 5, duration: 2 }}
+        transition={{ delay: 3, duration: 2 }}
       >
         {/* Large Device Home Page */}
         <LargeDevice />
