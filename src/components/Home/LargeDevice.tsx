@@ -10,7 +10,7 @@ interface Item {
   bg: string;
 }
 
-const items: Item[] = [
+export const items: Item[] = [
   {
     id: 1,
     title: "Version 3",
@@ -32,17 +32,19 @@ const VerticalAccordion = () => {
   const { openTab } = usePanelStore();
 
   return (
-    <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto overflow-auto">
-      {openTab === 0 && (
-        <div className="container mx-auto">
-          <Navbar />
-          <Hero />
-          <About />
-        </div>
-      )}
-      {items.map((item) => (
-        <Panel key={item.id} id={item.id} title={item.title} bg={item.bg} />
-      ))}
+    <div className="lg:block hidden">
+      <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto overflow-auto">
+        {openTab === 0 && (
+          <div className="container mx-auto">
+            <Navbar />
+            <Hero />
+            <About />
+          </div>
+        )}
+        {items.map((item) => (
+          <Panel key={item.id} id={item.id} title={item.title} bg={item.bg} />
+        ))}
+      </div>
     </div>
   );
 };

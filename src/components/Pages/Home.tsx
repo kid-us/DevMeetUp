@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
 import Loading from "../Loading/Loading";
-import VerticalAccordion from "../Home/Vertical";
-import Hero from "../Home/Hero";
-import Navbar from "../Navbar/Navbar";
-import About from "../Home/About";
+import LargeDevice from "../Home/LargeDevice";
+import SmallDevice from "../Home/SmallDevice";
 
 const Home = () => {
   return (
@@ -16,15 +14,11 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 5, duration: 2 }}
       >
-        <div className="lg:block hidden">
-          <VerticalAccordion />
-        </div>
+        {/* Large Device Home Page */}
+        <LargeDevice />
 
-        <div className="container mx-auto lg:hidden block">
-          <Navbar />
-          <Hero />
-          <About />
-        </div>
+        {/* Small Device Home Page */}
+        <SmallDevice />
       </motion.div>
     </div>
   );
