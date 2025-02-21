@@ -44,8 +44,8 @@ const Memories = () => {
   ];
 
   return (
-    <div className="lg:my-28 mt-20 mb-20">
-      <p className="uppercase text-color font-medium text-center lg:mt-40 mt-32 mb-10">
+    <div className="mt-24">
+      <p className="uppercase text-color font-medium text-center mb-10">
         <span className="bi-stars me-2"></span> Memories
       </p>
 

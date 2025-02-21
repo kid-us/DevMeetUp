@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { calendar, developers, events, tech } from "../../assets";
 import AnimatedNumbers from "./AnimatedNumbers";
 import Memories from "./Memories";
+import Footer from "./Footer";
 
 const About = () => {
   const message =
@@ -132,7 +133,7 @@ const About = () => {
                 <i className={`${mv.icon} text-color`}></i>
                 <p className="font-approach">{mv.title}</p>
               </div>
-              <p className="text-text-secondary">{mv.content}</p>
+              <p className="text-color-secondary">{mv.content}</p>
             </motion.div>
           ))}
         </div>
@@ -157,7 +158,7 @@ const About = () => {
               <p className={`text-2xl text-color ${w.icon}`}></p>
               <p className="font-semibold uppercase">{w.title}</p>
             </div>
-            <p className="text-text-secondary text-sm mt-2 bg-secondary border border-secondary-border rounded-l-3xl p-5">
+            <p className="text-color-secondary text-sm mt-2 bg-secondary border border-secondary-border rounded-l-3xl p-5">
               {w.content}
             </p>
           </motion.div>
@@ -166,6 +167,9 @@ const About = () => {
 
       {/* Memories */}
       <Memories />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
