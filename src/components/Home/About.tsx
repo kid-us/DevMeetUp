@@ -8,6 +8,7 @@ const About = () => {
 
   const words = message.split(" ");
 
+  // Stats
   const stats = [
     { id: 1, icon: developers, title: "Community Members", target: 5000 },
     { id: 2, icon: events, title: "Events Organized", target: 100 },
@@ -15,6 +16,7 @@ const About = () => {
     { id: 4, icon: calendar, title: "Years of Impact", target: 3 },
   ];
 
+  // Mission and Vision
   const missionVision = [
     {
       icon: "bi-bullseye",
@@ -30,6 +32,38 @@ const About = () => {
     },
   ];
 
+  // What we Do
+  const whatWeDo = [
+    {
+      id: 1,
+      title: "Tech Events",
+      icon: "bi-calendar3-week-fill",
+      content:
+        "Regular meetups, workshops, and conferences focused on latest technologies and industry trends.",
+    },
+    {
+      id: 2,
+      icon: "bi-people-fill",
+      title: "Community Building",
+      content:
+        "Creating spaces for developers to network, collaborate, and share experiences.",
+    },
+    {
+      id: 3,
+      icon: "bi-person-fill-gear",
+      title: "Skills Development",
+      content:
+        "Hands-on workshops and training sessions to enhance technical and soft skills.",
+    },
+    {
+      id: 4,
+      icon: "bi-wifi",
+      title: "Industry Connections",
+      content:
+        "Bridging the gap between talent and opportunities in the tech industry.",
+    },
+  ];
+
   return (
     <>
       {/* About Us */}
@@ -40,7 +74,7 @@ const About = () => {
         className="flex justify-center"
       >
         <div className="lg:w-[90%] text-center lg:mt-14 mt-8">
-          <p className="uppercase mb-5 text-color font-medium">
+          <p className="uppercase mb-10 text-color font-medium">
             <span className="bi-stars me-2"></span> About Us
           </p>
           <p className="lg:text-3xl text-2xl font-medium">
@@ -81,7 +115,7 @@ const About = () => {
       </div>
 
       {/* Vision and Mission */}
-      <p className="uppercase text-color font-medium text-center lg:mt-40 mt-32 mb-8">
+      <p className="uppercase text-color font-medium text-center lg:mt-40 mt-32 mb-10">
         <span className="bi-stars me-2"></span> Our Mission & Vision
       </p>
       <div className="flex justify-center ">
@@ -91,16 +125,42 @@ const About = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className=" border border-[#1C1E24] rounded p-5"
+              className="bg-[#10100e] border border-[#1C1E24] rounded p-5"
             >
               <div className="flex space-x-2 mb-5 font-semibold text-xl">
                 <i className={mv.icon}></i>
                 <p className="font-approach">{mv.title}</p>
               </div>
-              <p className="text-zinc-400">{mv.content}</p>
+              <p className="text-zinc-300">{mv.content}</p>
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* What we Do */}
+      <p className="uppercase text-color font-medium text-center lg:mt-20 mt-16 mb-10">
+        <span className="bi-stars me-2"></span> What we do
+      </p>
+      <div className="grid lg:grid-cols-4 gap-5">
+        {whatWeDo.map((w) => (
+          <motion.div
+            key={w.id}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <div className="relative bg-[#10100e] border border-[#1C1E24] rounded-r-full p-5">
+              <p className="absolute -top-3 text-sm bg-white rounded-full font-bold flex justify-center items-center w-5 h-5 text-black text-center">
+                {w.id}
+              </p>
+              <p className={`text-2xl text-color ${w.icon}`}></p>
+              <p className="font-semibold uppercase">{w.title}</p>
+            </div>
+            <p className="text-zinc-300 text-sm mt-2 bg-[#10100e] border border-[#1C1E24] rounded-l-3xl p-5">
+              {w.content}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </>
   );
