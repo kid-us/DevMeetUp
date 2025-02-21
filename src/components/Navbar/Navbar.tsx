@@ -53,7 +53,7 @@ const Navbar = () => {
     <>
       <motion.div className=" w-full top-0 left-0 z-50">
         <div className="flex justify-between pt-5 w-full mb-10">
-          <Link to={"/"} className="font-semibold relative py-[8px] text-xl">
+          <Link to={"/"} className="font-semibold relative py-[8px]">
             {"{DevMeetUp}"}
           </Link>
           <div className="flex gap-x-5">
@@ -61,7 +61,7 @@ const Navbar = () => {
               onClick={toggleTheme}
               className={`${
                 savedTheme === "light" ? "bi-moon-fill" : "bi-brightness-high"
-              } lg:me-14 text-xl`}
+              } lg:me-14`}
             ></button>
 
             <button
@@ -69,7 +69,7 @@ const Navbar = () => {
                 toggleTheme;
                 setViewMenu(true);
               }}
-              className={`lg:hidden block bi-list lg:me-14 text-2xl`}
+              className={`lg:hidden block bi-list lg:me-14 text-xl`}
             ></button>
           </div>
         </div>
