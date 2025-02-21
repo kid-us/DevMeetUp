@@ -17,20 +17,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* --btn: #71717a; */
 }
 
 .light {
   color: #000;
   --background: #fff;
-  --btn: #242424;
-  --btn-color: #fff !important;
+  --btn: #000;
+  --btn-color: #000 !important;
   --gradient1: #e6e4e6;
   --gradient2: #ffffff;
   --soft-text: #1f2937;
   --shadow: #8cc84b;
-  background: var(--background);
   --panel-border: #575bd2;
   --panel-text: #000;
+  --color: #615fff;
+
+  background: var(--background);
 }
 
 .dark {
@@ -44,6 +47,7 @@
   --shadow: #f3f4f2;
   --panel-border: #575bd2;
   --panel-text: #fff;
+  --color: #615fff;
 
   background: var(--background);
 }

@@ -11,6 +11,8 @@ module.exports = {
         softText: "var(--soft-text)",
         panelText: "var(--panel-text)",
         panelBorder: "var(--panel-border)",
+        btn: "var(--btn)",
+        color: "var(--color)",
       },
       screen: {
         sm: "640px", // Small devices (landscape phones)
