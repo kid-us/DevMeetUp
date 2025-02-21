@@ -125,13 +125,13 @@ const About = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="bg-[#10100e] border border-[#1C1E24] rounded p-5"
+              className="bg-secondary border border-secondary-border rounded p-5"
             >
               <div className="flex space-x-2 mb-5 font-semibold text-xl">
                 <i className={`${mv.icon} text-color`}></i>
                 <p className="font-approach">{mv.title}</p>
               </div>
-              <p className="text-zinc-300">{mv.content}</p>
+              <p className="text-text-secondary">{mv.content}</p>
             </motion.div>
           ))}
         </div>
@@ -149,14 +149,14 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="relative bg-[#10100e] border border-[#1C1E24] rounded-r-full p-5">
+            <div className="relative bg-secondary border border-secondary-border rounded-r-full p-5">
               <p className="absolute -top-3 text-sm bg-white rounded-full font-bold flex justify-center items-center w-5 h-5 text-black text-center">
                 {w.id}
               </p>
               <p className={`text-2xl text-color ${w.icon}`}></p>
               <p className="font-semibold uppercase">{w.title}</p>
             </div>
-            <p className="text-zinc-300 text-sm mt-2 bg-[#10100e] border border-[#1C1E24] rounded-l-3xl p-5">
+            <p className="text-text-secondary text-sm mt-2 bg-secondary border border-secondary-border rounded-l-3xl p-5">
               {w.content}
             </p>
           </motion.div>

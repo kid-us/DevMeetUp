@@ -32,6 +32,9 @@
   --panel-border: #575bd2;
   --panel-text: #000;
   --color: #615fff;
+  --color-secondary: #3f3f46;
+  --secondary: #f7f8fa;
+  --secondary-border: #efefe9;
 
   background: var(--background);
 }
@@ -48,6 +51,9 @@
   --panel-border: #575bd2;
   --panel-text: #fff;
   --color: #615fff;
+  --color-secondary: #d4d4d8;
+  --secondary: #10100e;
+  --secondary-border: #1c1e24;
 
   background: var(--background);
 }
