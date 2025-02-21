@@ -60,7 +60,7 @@ const VerticalAccordion = () => {
         onClick={() => setOpen(0)}
         className={`absolute ${
           open === 2 ? "right-36" : open === 3 ? "right-20" : "right-52"
-        } bi-house-fill mt-6 w-8 h-8 rounded text-xl lg:inline hidden`}
+        } bi-house-fill mt-6 w-8 h-8 rounded lg:inline hidden`}
       ></button>
     </div>
   );
