@@ -6,7 +6,7 @@ import { hero } from "../../assets";
 
 const Hero = () => {
   const [index, setIndex] = useState<number | null>(null);
-  const [showScrollAnimation, setShowScrollAnimation] = useState(false);
+  // const [showScrollAnimation, setShowScrollAnimation] = useState(false);
 
   useEffect(() => {
     const startTimeout = setTimeout(() => {
@@ -16,7 +16,7 @@ const Hero = () => {
         setIndex((prevIndex) => {
           if (prevIndex === null || prevIndex >= messages.length - 1) {
             clearInterval(interval);
-            setShowScrollAnimation(true); // Show final message
+            // setShowScrollAnimation(true); // Show final message/
             return prevIndex;
           }
           return prevIndex + 1;
@@ -30,15 +30,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="lg:h-[87dvh]">
+    <div className="lg:h-screen h-[90dvh]">
       <div className="shine"></div>
-      <div className="grid lg:grid-cols-2">
-        <div
-          className={`relative flex justify-center items-center 
-            ${showScrollAnimation && "mt-10 transition-all duration-300"}
-            
-          `}
-        >
+      <div className="flex items-center h-full lg:grid lg:grid-cols-2">
+        <div className={`relative flex justify-center items-center`}>
           <div>
             <h1 className="lg:text-6xl text-4xl lg:w-[82%] lg:leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience

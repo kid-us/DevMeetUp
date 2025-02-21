@@ -23,7 +23,7 @@ const About = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="flex justify-center"
       >
-        <div className="lg:w-[90%] text-center lg:mt-14 mt-20">
+        <div className="lg:w-[90%] text-center lg:mt-14 mt-8">
           <p className="uppercase mb-5 text-color font-medium">
             <span className="bi-stars me-2"></span> About Us
           </p>
