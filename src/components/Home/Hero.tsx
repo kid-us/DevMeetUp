@@ -47,7 +47,7 @@ const Hero = () => {
             <h1 className="lg:text-6xl text-4xl lg:w-[82%] lg:leading-14 font-extrabold text-shadow">
               Join the Ultimate Developers Meeting Experience
             </h1>
-            <p className="text-soft-text mt-5 l:w-[70%] lg:text-sm">
+            <p className="text-soft-text my-10 l:w-[70%] lg:text-sm">
               Connect with fellow developers, share ideas, amd elevate your
               skills at our upcoming meeting. Don't miss this opportunity to
               network and innovate together!
@@ -55,7 +55,7 @@ const Hero = () => {
 
             {/* Good Message */}
             {showFinalMessage && (
-              <p className="lg:block hidden mt-10 text-soft">
+              <p className="lg:block hidden my-10 text-soft">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
