@@ -128,7 +128,7 @@ const About = () => {
               className="bg-[#10100e] border border-[#1C1E24] rounded p-5"
             >
               <div className="flex space-x-2 mb-5 font-semibold text-xl">
-                <i className={mv.icon}></i>
+                <i className={`${mv.icon} text-color`}></i>
                 <p className="font-approach">{mv.title}</p>
               </div>
               <p className="text-zinc-300">{mv.content}</p>
