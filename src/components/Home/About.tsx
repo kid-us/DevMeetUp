@@ -9,14 +9,30 @@ const About = () => {
   const words = message.split(" ");
 
   const stats = [
-    { icon: developers, title: "Community Members", target: 5000 },
-    { icon: events, title: "Events Organized", target: 100 },
-    { icon: events, title: "Tech Partners", target: 50 },
-    { icon: calendar, title: "Years of Impact", target: 3 },
+    { id: 1, icon: developers, title: "Community Members", target: 5000 },
+    { id: 2, icon: events, title: "Events Organized", target: 100 },
+    { id: 3, icon: events, title: "Tech Partners", target: 50 },
+    { id: 4, icon: calendar, title: "Years of Impact", target: 3 },
+  ];
+
+  const missionVision = [
+    {
+      icon: "bi-bullseye",
+      title: "Mission",
+      content:
+        "DevMeetup is dedicated to fostering a vibrant tech community in Ethiopia. We bring together developers, designers, and tech enthusiasts to share knowledge, collaborate, and grow together.",
+    },
+    {
+      icon: "bi-binoculars-fill",
+      title: "Vision",
+      content:
+        "To become the premier tech community platform in Africa, empowering the next generation of tech leaders and innovators through meaningful connections and knowledge sharing.",
+    },
   ];
 
   return (
     <>
+      {/* About Us */}
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -31,8 +47,8 @@ const About = () => {
             {words.map((word, index) => (
               <motion.span
                 key={index}
-                initial={{ x: -5, color: "#71717a" }}
-                whileInView={{ x: 0, color: "" }}
+                initial={{ color: "#71717a" }}
+                whileInView={{ color: "" }}
                 transition={{ delay: index * 0.03 }}
                 className="inline-block mr-2"
               >
@@ -42,11 +58,12 @@ const About = () => {
           </p>
         </div>
       </motion.div>
+
       {/* Stats */}
       <div className="lg:flex lg:justify-center lg:items-center grid grid-cols-2 mt-14 lg:gap-x-20">
         {stats.map((stat, index) => (
           <motion.div
-            key={index}
+            key={stat.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
@@ -61,6 +78,29 @@ const About = () => {
             </p>
           </motion.div>
         ))}
+      </div>
+
+      {/* Vision and Mission */}
+      <p className="uppercase text-color font-medium text-center lg:mt-40 mt-32 mb-8">
+        <span className="bi-stars me-2"></span> Our Mission & Vision
+      </p>
+      <div className="flex justify-center ">
+        <div className="grid lg:grid-cols-2 lg:gap-10 gap-8">
+          {missionVision.map((mv) => (
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className=" border border-[#1C1E24] rounded p-5"
+            >
+              <div className="flex space-x-2 mb-5 font-semibold text-xl">
+                <i className={mv.icon}></i>
+                <p className="font-approach">{mv.title}</p>
+              </div>
+              <p className="text-zinc-400">{mv.content}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </>
   );
