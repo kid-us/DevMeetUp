@@ -10,9 +10,9 @@ interface Version {
 
 const Loading = () => {
   const versions: Version[] = [
-    { id: 1, icon: "bi-check", version: "v1", delay: 0.6 },
-    { id: 2, icon: "bi-check", version: "v2", delay: 0.9 },
-    { id: 2, icon: "bi-hourglass-top", version: "v3", delay: 1.2 },
+    { id: 1, icon: "bi-check", version: "V1", delay: 0.6 },
+    { id: 2, icon: "bi-check", version: "V2", delay: 0.9 },
+    { id: 2, icon: "bi-hourglass-top", version: "V3", delay: 1.2 },
   ];
 
   const [show, setShow] = useState(true);
@@ -46,7 +46,7 @@ const Loading = () => {
                 delay: 0.3,
                 duration: 1,
               }}
-              className="flex justify-center items-center lg:text-xl text-lg font-bold text-shadow"
+              className="flex justify-center items-center lg:text-xl text-lg font-bold"
             >
               {"<"}DevMeetUp <span className="bi-cup-hot-fill ms-2"></span>{" "}
               {"/>"}
@@ -62,8 +62,8 @@ const Loading = () => {
                   delay: v.delay,
                   duration: 0.5,
                 }}
-                className={`relative lg:text-2xl ${
-                  v.version === "v3" ? "" : "text-green-700 font-extrabold"
+                className={`relative lg:text-xl ${
+                  v.version === "V3" ? "" : "text-green-700 font-semibold"
                 }`}
               >
                 <motion.span
