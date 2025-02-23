@@ -16,6 +16,7 @@ module.exports = {
         colorSecondary: "var(--color-secondary)",
         secondary: "var(--secondary)",
         secondaryBorder: "var(--secondary-border)",
+        panelBg: "var(--panel-bg)",
       },
       screen: {
         sm: "640px", // Small devices (landscape phones)

@@ -54,12 +54,6 @@ const Panel: React.FC<PanelProps> = ({ id, title, bg }) => {
           >
             <motion.div initial="closed" animate="open" exit="closed">
               <Navbar />
-              {/* {id === 0 && (
-                <>
-                  <Hero />
-                  <About />
-                </>
-              )} */}
               {id === 1 && <Version1 />}
               {id === 2 && <Version2 />}
               {id === 3 && <Version3 />}
@@ -71,14 +65,10 @@ const Panel: React.FC<PanelProps> = ({ id, title, bg }) => {
       <button
         key={`button-${id}`}
         className={`${
-          openTab === id
-            ? "bg-black/90 text-white font-semibold"
-            : `${bg} text-black`
-        } sticky top-0 transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 group shadow border-l border-panel-border text-panel-text`}
+          openTab === id ? "bg-panel-bg font-semibold text-btn-color" : `${bg}`
+        } sticky top-0 transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 group shadow border-l border-panel-border`}
         onClick={() => setOpenTab(id)}
       >
-        {/* <img src={icon} className={`mb-3 w-5 h-5`}></img> */}
-
         {title.split("").map((t) => (
           <span className="leading-1 uppercase">{t}</span>
         ))}

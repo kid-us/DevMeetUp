@@ -30,11 +30,12 @@
   --soft-text: #1f2937;
   --shadow: #8cc84b;
   --panel-border: #575bd2;
-  --panel-text: #000;
+  --panel-text: #fff;
   --color: #615fff;
   --color-secondary: #3f3f46;
   --secondary: #f7f8fa;
   --secondary-border: #efefe9;
+  --panel-bg: #000;
 
   background: var(--background);
 }
@@ -49,11 +50,12 @@
   --soft-text: #d1d5db;
   --shadow: #f3f4f2;
   --panel-border: #575bd2;
-  --panel-text: #fff;
+  --panel-text: #000;
   --color: #615fff;
   --color-secondary: #d4d4d8;
   --secondary: #10100e;
   --secondary-border: #1c1e24;
+  --panel-bg: #fff;
 
   background: var(--background);
 }
