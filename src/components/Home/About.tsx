@@ -85,6 +85,7 @@ const About = () => {
                 key={index}
                 initial={{ color: "#71717a" }}
                 whileInView={{ color: "" }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.03 }}
                 className="inline-block mr-2"
               >
@@ -103,6 +104,7 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
             className={`text-center ${index % 2 === 0 ? "" : "lg:mt-24 mt-20"}`}
           >
             <div className="flex justify-center mb-3">
@@ -127,6 +129,7 @@ const About = () => {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
               className="bg-secondary border border-secondary-border rounded p-5"
             >
               <div className="flex space-x-2 mb-5 font-semibold text-xl">
@@ -150,6 +153,7 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="relative bg-secondary border border-secondary-border rounded-r-full p-5">
               <p className="absolute -top-3 text-sm bg-white rounded-full font-bold flex justify-center items-center w-5 h-5 text-black text-center">
