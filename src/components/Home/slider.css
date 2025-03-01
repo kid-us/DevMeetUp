@@ -2,7 +2,7 @@
   max-width: 1800px;
   overflow: hidden;
   --speed: 100s;
-  --item-width: 400px;
+  --item-width: 350px;
   --item-gap: 25px;
 
   --single-slide-speed: calc(var(--speed) / var(--num-items));
@@ -19,7 +19,7 @@
 
 .marquee-item {
   width: var(--item-width);
-  height: 250px;
+  height: 200px;
   grid-area: resting;
   animation: marquee-move var(--speed) linear infinite
     var(--direction, forwards);
