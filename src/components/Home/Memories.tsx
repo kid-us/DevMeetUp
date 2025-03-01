@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import {
   m1,
   m2,
@@ -44,69 +43,54 @@ const Memories = () => {
   ];
 
   return (
-    <div className="mt-24">
+    <div className="pt-20">
       <p className="uppercase text-color font-medium text-center mb-10">
         <span className="bi-stars me-2"></span> Memories
       </p>
 
+      {/* Forward Marquee */}
       <div
-        className="slider"
-        style={
-          {
-            "--quantity": memories1.length,
-          } as React.CSSProperties
-        }
+        className="marquee fadeout-horizontal"
+        style={{ "--num-items": memories1.length } as React.CSSProperties}
       >
-        <div className="slide-track-right">
-          {[...memories1, ...memories1].map((m, index) => (
-            <motion.div
-              key={m.id}
-              layout
-              className="slide rounded w-full h-60"
-              style={{ "--position": index } as React.CSSProperties}
-              whileHover={{
-                scale: 0.97,
-                rotate: 0.5,
-                transition: { duration: 0.5 },
-              }}
+        <div className="marquee-track">
+          {memories1.map((m) => (
+            <div
+              className="marquee-item"
+              style={{ "--item-position": m.id } as React.CSSProperties}
             >
               <img
                 src={m.img}
                 alt={`Memories-${m.id}`}
-                className="h-full w-full object-cover object-center rounded grayscale hover:grayscale-0"
+                className="h-full w-full object-cover object-center rounded hover:scale-95 hover:rotate-2 transition-all duration-300"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
+      {/* Reverse */}
       <div
-        className="slider"
+        className="marquee fadeout-horizontal mt-10"
         style={
           {
-            "--quantity": memories2.length,
+            "--num-items": memories2.length,
+            "--direction": "reverse",
           } as React.CSSProperties
         }
       >
-        <div className="slide-track-left">
-          {[...memories2, ...memories2].map((m, index) => (
-            <motion.div
-              key={m.id}
-              layout
-              className="slide rounded w-full h-60"
-              style={{ "--position": index } as React.CSSProperties}
-              whileHover={{
-                scale: 0.97,
-                rotate: 0.5,
-                transition: { duration: 0.5 },
-              }}
+        <div className="marquee-track">
+          {memories2.map((m) => (
+            <div
+              className="marquee-item"
+              style={{ "--item-position": m.id } as React.CSSProperties}
             >
               <img
                 src={m.img}
                 alt={`Memories-${m.id}`}
-                className="h-full w-full object-cover object-center rounded grayscale hover:grayscale-0"
+                className="h-full w-full object-cover object-center rounded hover:scale-95 hover:rotate-2 transition-all duration-300"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
