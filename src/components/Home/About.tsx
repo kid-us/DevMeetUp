@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { calendar, developers, events, tech } from "../../assets";
-import AnimatedNumbers from "./AnimatedNumbers";
+import AnimatedNumbers from "../AnimatedNumbers";
 import Memories from "./Memories";
 import Footer from "./Footer";
 

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import EncryptButton from "./EncryptButton";
+import EncryptButton from "../EncryptButton";
 import { useEffect, useState } from "react";
 import { messages } from "../../services/messages";
 import { hero } from "../../assets";
