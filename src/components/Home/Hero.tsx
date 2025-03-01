@@ -31,7 +31,6 @@ const Hero = () => {
 
   return (
     <div className="h-[90dvh]">
-      <div className="shine"></div>
       <div className="flex items-center h-full lg:grid lg:grid-cols-2">
         <div className={`relative flex justify-center items-center`}>
           <div>

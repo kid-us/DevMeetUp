@@ -35,7 +35,7 @@ const VerticalAccordion = () => {
     <div className="lg:block hidden">
       <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto overflow-auto">
         {openTab === 0 && (
-          <div className="bg2">
+          <div className="hero-bg w-full">
             <div className="container mx-auto">
               <Navbar />
               <Hero />

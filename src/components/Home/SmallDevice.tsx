@@ -5,7 +5,7 @@ import About from "./About";
 const SmallDevice = () => {
   return (
     <div className="lg:hidden block">
-      <div className="bg2">
+      <div className="hero-bg">
         <div className="container mx-auto">
           <Navbar />
           <Hero />
