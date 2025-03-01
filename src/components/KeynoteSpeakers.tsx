@@ -17,13 +17,6 @@ const KeynoteSpeakers = ({ keyNote }: Props) => {
         Keynote Speaker{keyNote.length > 1 ? "s" : ""}
       </h1>
 
-      {/*  ${
-              keyNote.length < 2 && index == 0
-                ? "col-start-2"
-                : keyNote.length < 3 && index == 0
-                ? "col-start-2"
-                : ""
-            }  */}
       <div className="flex justify-center mt-8">
         <div
           className={`flex gap-5 ${
