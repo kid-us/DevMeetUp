@@ -131,7 +131,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-secondary border border-secondary-border rounded p-5"
+              className="bg border border-secondary-border rounded-xl px-5 py-10"
             >
               <div className="flex space-x-2 mb-5 font-semibold text-xl">
                 <i className={`${mv.icon} text-color`}></i>

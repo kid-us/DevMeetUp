@@ -4,10 +4,16 @@ import About from "./About";
 
 const SmallDevice = () => {
   return (
-    <div className="container mx-auto lg:hidden block">
-      <Navbar />
-      <Hero />
-      <About />
+    <div className="lg:hidden block">
+      <div className="bg2">
+        <div className="container mx-auto">
+          <Navbar />
+          <Hero />
+        </div>
+      </div>
+      <div className="container mx-auto mt-14">
+        <About />
+      </div>
     </div>
   );
 };

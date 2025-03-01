@@ -35,10 +35,12 @@ const VerticalAccordion = () => {
     <div className="lg:block hidden">
       <div className="flex flex-col lg:flex-row h-[100dvh] w-full mx-auto overflow-auto">
         {openTab === 0 && (
-          <div className="container mx-auto">
-            <Navbar />
-            <Hero />
-            <About />
+          <div className="bg2">
+            <div className="container mx-auto">
+              <Navbar />
+              <Hero />
+              <About />
+            </div>
           </div>
         )}
         {items.map((item) => (
