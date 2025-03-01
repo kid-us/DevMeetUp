@@ -135,5 +135,5 @@
     url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 
   background-size: 5px, cover, cover;
-  background-blend-mode: overlay, normal, normal;
+  /* background-blend-mode: overlay, normal, normal; */
 }

@@ -54,9 +54,9 @@ const Panel: React.FC<PanelProps> = ({ id, title }) => {
           >
             <motion.div initial="closed" animate="open" exit="closed">
               <Navbar />
-              {id === 1 && <Version1 />}
+              {id === 1 && <Version3 />}
               {id === 2 && <Version2 />}
-              {id === 3 && <Version3 />}
+              {id === 3 && <Version1 />}
             </motion.div>
           </motion.div>
         )}
