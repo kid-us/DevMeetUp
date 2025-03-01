@@ -1,8 +1,10 @@
 import { BookHeart, CalendarFold, MapPinHouse, User } from "lucide-react";
 import EventDetail, { Event } from "../EventDetail";
+import KeynoteSpeakers, { KeyNote } from "../KeynoteSpeakers";
+import { chapi } from "../../assets";
 
 const Version1 = () => {
-  const Event: Event[] = [
+  const event: Event[] = [
     {
       id: 1,
       icon: CalendarFold,
@@ -29,6 +31,16 @@ const Version1 = () => {
     },
   ];
 
+  const keyNoteSpeakers: KeyNote[] = [
+    {
+      id: 1,
+      name: "Temkin Mengistu(Chapi)",
+      img: chapi,
+      title: "Senior Backend Developer",
+      desc: "Specialize in building robust, scalable backend systems and automating development workflows. Expertise in Django, Docker, Python, NodeJS",
+    },
+  ];
+
   return (
     <div className="pt-16">
       <EventDetail
@@ -37,8 +49,10 @@ const Version1 = () => {
         description="Self sponsered by Chapi and in colab with Meron, the first dev meetup
         featured Join an exciting day of tech talks, workshops, and networking
         opportunities!"
-        icons={Event}
+        icons={event}
       />
+
+      <KeynoteSpeakers keyNote={keyNoteSpeakers} />
     </div>
   );
 };

@@ -19,6 +19,8 @@ import m12 from "./memories/12.jpg";
 import m13 from "./memories/13.jpg";
 import m14 from "./memories/14.jpg";
 
+import chapi from "./chapi.jpg";
+
 export {
   hero,
   calendar,
@@ -39,4 +41,5 @@ export {
   m12,
   m13,
   m14,
+  chapi,
 };
