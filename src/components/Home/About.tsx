@@ -73,9 +73,10 @@ const About = () => {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
+        viewport={{ once: true }}
         className="flex justify-center"
       >
-        <div className="lg:w-[90%] text-center lg:mt-14 mt-8">
+        <div className="lg:w-[90%] text-center lg:mt-14">
           <p className="uppercase mb-10 text-color font-medium">
             <span className="bi-stars me-2"></span> About Us
           </p>
