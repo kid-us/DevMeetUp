@@ -156,14 +156,14 @@ const About = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="relative bg-secondary border border-secondary-border rounded-r-full p-5">
+            <div className="relative card-bg border border-secondary-border rounded-r-full p-5">
               <p className="absolute -top-3 text-sm bg-white rounded-full font-bold flex justify-center items-center w-5 h-5 text-black text-center">
                 {w.id}
               </p>
               <p className={`text-2xl text-color ${w.icon}`}></p>
               <p className="font-semibold uppercase">{w.title}</p>
             </div>
-            <p className="text-color-secondary text-sm mt-2 bg-secondary border border-secondary-border rounded-l-3xl p-5">
+            <p className="text-color-secondary text-sm mt-2 card-bg border border-secondary-border rounded-l-3xl p-5">
               {w.content}
             </p>
           </motion.div>

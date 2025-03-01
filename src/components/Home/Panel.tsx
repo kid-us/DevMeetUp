@@ -12,7 +12,7 @@ interface PanelProps {
   bg: string;
 }
 
-const Panel: React.FC<PanelProps> = ({ id, title, bg }) => {
+const Panel: React.FC<PanelProps> = ({ id, title }) => {
   const { openTab, setOpenTab } = usePanelStore();
 
   const { width } = useWindowSize();
@@ -65,7 +65,9 @@ const Panel: React.FC<PanelProps> = ({ id, title, bg }) => {
       <button
         key={`button-${id}`}
         className={`${
-          openTab === id ? "bg-panel-bg font-semibold text-btn-color" : `${bg}`
+          openTab === id
+            ? "bg-panel-bg font-semibold text-btn-color"
+            : `card-bg`
         } sticky top-0 transition-colors px-5 flex flex-col-reverse lg:flex-col justify-center items-center gap-4 group shadow border-l border-panel-border`}
         onClick={() => setOpenTab(id)}
       >
